@@ -1,0 +1,60 @@
+/*Global styling*/
+body {
+    background: black;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+main {
+    overflow: hidden;
+}
+a {
+    text-decoration: none; /*This is for all links on the page*/
+}
+
+/*Side box styling*/
+#topHeaderBox {
+    text-align: center;
+    background-color: darkorange;
+    border-radius: 15px;
+    width: 15%;
+    height: 90px;
+    margin: 20px;
+    float: left;
+}
+#topHeader {
+    font-family: "Reddit Mono";
+}
+#linksBox {
+    font-family: "Reddit Mono";
+}
+#topRightBox {
+    text-align: center;
+    background-color: darkorange;
+    border-radius: 15px;
+    width: 15%;
+    height: 700px;
+    margin: 20px;
+    overflow: hidden;  
+    font-family: "Reddit Mono";
+    float: right;
+}
+
+/*Everything else*/
+#lightModeButton {
+    font-family: "Reddit Mono";
+    margin: 100px;
+    background-color: orange;
+    border-radius: 10px;
+    border: none;
+}
+
+/*Animations*/
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
