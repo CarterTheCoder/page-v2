@@ -1,24 +1,26 @@
 const body = document.body;
 const lightModeButton = document.getElementById('lightModeButton');
-const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+let modeCookie = document.cookie;
 
 lightModeButton.addEventListener('click', function() { // Light mode button
     
     if (body.style.backgroundColor === 'white') {
+        document.cookie = 'mode=dark';
         body.style.backgroundColor = 'black';
         lightModeButton.innerText = 'Switch to Light Mode';
     } else {
+        document.cookie = 'mode=light';
         body.style.backgroundColor = 'white';
         lightModeButton.innerText = 'Switch to Dark Mode';
     }
-  });
+});
 
-if (prefersDarkMode.matches) { // If user's browser appearance is set to dark/light, change to that
-  document.body.backgroundColor === 'black';
+if (modeCookie == 'mode=dark') { // Check what the user last set their light/dark mode to
+  body.style.backgroundColor = 'black';
   lightModeButton.innerText = 'Switch to Light Mode';
-  console.log('Browser appearance is dark');
+  console.log('Mode cookie is dark');
 } else {
-    body.style.backgroundColor = 'white';
-    lightModeButton.innerText = 'Switch to Dark Mode';
-    console.log('Browser appearance is light');
+  body.style.backgroundColor = 'white';
+  lightModeButton.innerText = 'Switch to Dark Mode';
+  console.log('Mode cookie is white');
 }

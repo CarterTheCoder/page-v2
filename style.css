@@ -22,12 +22,10 @@ a {
     margin: 20px;
     float: left;
 }
-#topHeader {
+#topHeader, #linksBox {
     font-family: "Reddit Mono";
 }
-#linksBox {
-    font-family: "Reddit Mono";
-}
+
 #topRightBox {
     text-align: center;
     background-color: darkorange;
